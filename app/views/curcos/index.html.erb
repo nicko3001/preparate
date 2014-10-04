@@ -1,0 +1,29 @@
+<h1>Listing curcos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @curcos.each do |curco| %>
+      <tr>
+        <td><%= curco.titulo %></td>
+        <td><%= curco.descripcion %></td>
+        <td><%= curco.precio %></td>
+        <td><%= link_to 'Show', curco %></td>
+        <td><%= link_to 'Edit', edit_curco_path(curco) %></td>
+        <td><%= link_to 'Destroy', curco, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Curco', new_curco_path %>

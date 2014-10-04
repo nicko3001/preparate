@@ -1,0 +1,11 @@
+<div class="row">
+<% @curcos.each do |curco| %>
+	<div class="columna">     
+			<%= image_tag(curco.Imagen, size:'100x100') %><br> 
+        <h1><%= curco.titulo %></h1><br>
+        <em><%= curco.descripcion %></em><br>
+        <b class="verde"><%= curco.precio %>$</b><br>
+        <%= link_to 'Detalles', curco %>
+    </div>    
+    <% end %>
+</div>

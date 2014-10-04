@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @curco.titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @curco.descripcion %>
+</p>
+
+<p>
+  <strong>Contenido:</strong>
+  <%= @curco.Contenido %>
+</p>
+
+
+<p>
+  <strong>Precio:</strong>
+  <%= @curco.precio %>
+  <strong>$</strong>
+</p>
+
+<%= link_to 'Edit', edit_curco_path(@curco) %> |
+<%= link_to 'Back', curcos_path %>
